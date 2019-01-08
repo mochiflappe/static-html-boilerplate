@@ -1,0 +1,26 @@
+{
+  "name": "static-html-boilerplate",
+  "version": "1.0.0",
+  "description": "Static Website Development Tool",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mochiflappe/static-html-boilerplate.git"
+  },
+  "author": "mochiflappe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mochiflappe/static-html-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mochiflappe/static-html-boilerplate#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=development"
+  },
+  "devDependencies": {
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.1"
+  }
+}
