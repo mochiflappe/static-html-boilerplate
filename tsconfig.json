@@ -2,8 +2,15 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
-    "noImplicitAny": true,
     "module": "es6",
-    "target": "es5"
+    "target": "es5",
+    // 暗黙的なanyを許可しない
+    "noImplicitAny": true,
+    // 暗黙的な返り値を許可しない
+    "noImplicitReturns": true,
+    // 未使用変数を許可しない
+    "noUnusedLocals": true,
+    // 使用していない引数を許可しない
+    "noUnusedParameters": true
   }
 }
