@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.ts',
+    entry: './src/assets/script/index.ts',
     devtool: 'inline-source-map',
     module: {
         rules: [
@@ -18,6 +18,6 @@ module.exports = {
     },
     output: {
         filename: 'app.bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist/script/')
     }
 };
