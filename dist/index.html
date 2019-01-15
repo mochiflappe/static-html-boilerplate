@@ -1,0 +1,145 @@
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module build failed (from ./node_modules/ejs-html-loader/lib/index.js):
+  Error: Cannot find module 'ejs'
+  
+  - loader.js:581 Function.Module._resolveFilename
+    internal/modules/cjs/loader.js:581:15
+  
+  - loader.js:507 Function.Module._load
+    internal/modules/cjs/loader.js:507:25
+  
+  - loader.js:637 Module.require
+    internal/modules/cjs/loader.js:637:17
+  
+  - v8-compile-cache.js:159 require
+    [static-html-boilerplate]/[v8-compile-cache]/v8-compile-cache.js:159:20
+  
+  - render.js:10 Object.<anonymous>
+    [static-html-boilerplate]/[ejs-html-loader]/lib/render.js:10:12
+  
+  - v8-compile-cache.js:178 Module._compile
+    [static-html-boilerplate]/[v8-compile-cache]/v8-compile-cache.js:178:30
+  
+  - loader.js:700 Object.Module._extensions..js
+    internal/modules/cjs/loader.js:700:10
+  
+  - loader.js:599 Module.load
+    internal/modules/cjs/loader.js:599:32
+  
+  - loader.js:538 tryModuleLoad
+    internal/modules/cjs/loader.js:538:12
+  
+  - loader.js:530 Function.Module._load
+    internal/modules/cjs/loader.js:530:3
+  
+  - loader.js:637 Module.require
+    internal/modules/cjs/loader.js:637:17
+  
+  - v8-compile-cache.js:159 require
+    [static-html-boilerplate]/[v8-compile-cache]/v8-compile-cache.js:159:20
+  
+  - index.js:12 Object.<anonymous>
+    [static-html-boilerplate]/[ejs-html-loader]/lib/index.js:12:16
+  
+  - v8-compile-cache.js:178 Module._compile
+    [static-html-boilerplate]/[v8-compile-cache]/v8-compile-cache.js:178:30
+  
+  - loader.js:700 Object.Module._extensions..js
+    internal/modules/cjs/loader.js:700:10
+  
+  - loader.js:599 Module.load
+    internal/modules/cjs/loader.js:599:32
+  
+  - loader.js:538 tryModuleLoad
+    internal/modules/cjs/loader.js:538:12
+  
+  - loader.js:530 Function.Module._load
+    internal/modules/cjs/loader.js:530:3
+  
+  - loader.js:637 Module.require
+    internal/modules/cjs/loader.js:637:17
+  
+  - v8-compile-cache.js:159 require
+    [static-html-boilerplate]/[v8-compile-cache]/v8-compile-cache.js:159:20
+  
+  - loadLoader.js:13 loadLoader
+    [static-html-boilerplate]/[loader-runner]/lib/loadLoader.js:13:17
+  
+  - LoaderRunner.js:169 iteratePitchingLoaders
+    [static-html-boilerplate]/[loader-runner]/lib/LoaderRunner.js:169:2
+  
+  - LoaderRunner.js:165 iteratePitchingLoaders
+    [static-html-boilerplate]/[loader-runner]/lib/LoaderRunner.js:165:10
+  
+  - LoaderRunner.js:173 
+    [static-html-boilerplate]/[loader-runner]/lib/LoaderRunner.js:173:18
+  
+  - loadLoader.js:36 loadLoader
+    [static-html-boilerplate]/[loader-runner]/lib/loadLoader.js:36:3
+  
+  - LoaderRunner.js:169 iteratePitchingLoaders
+    [static-html-boilerplate]/[loader-runner]/lib/LoaderRunner.js:169:2
+  
+  - LoaderRunner.js:165 iteratePitchingLoaders
+    [static-html-boilerplate]/[loader-runner]/lib/LoaderRunner.js:165:10
+  
+  - LoaderRunner.js:173 
+    [static-html-boilerplate]/[loader-runner]/lib/LoaderRunner.js:173:18
+  
+  - loadLoader.js:36 loadLoader
+    [static-html-boilerplate]/[loader-runner]/lib/loadLoader.js:36:3
+  
+  
+  - Error: Cannot find module 'ejs'
+  
+  - compiler.js:79 childCompiler.runAsChild
+    [static-html-boilerplate]/[html-webpack-plugin]/lib/compiler.js:79:16
+  
+  - Compiler.js:296 compile
+    [static-html-boilerplate]/[webpack]/lib/Compiler.js:296:11
+  
+  - Compiler.js:552 hooks.afterCompile.callAsync.err
+    [static-html-boilerplate]/[webpack]/lib/Compiler.js:552:14
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [static-html-boilerplate]/[tapable]/lib/Hook.js:154:20
+  
+  - Compiler.js:549 compilation.seal.err
+    [static-html-boilerplate]/[webpack]/lib/Compiler.js:549:30
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [static-html-boilerplate]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1323 hooks.optimizeAssets.callAsync.err
+    [static-html-boilerplate]/[webpack]/lib/Compilation.js:1323:35
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [static-html-boilerplate]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1314 hooks.optimizeChunkAssets.callAsync.err
+    [static-html-boilerplate]/[webpack]/lib/Compilation.js:1314:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [static-html-boilerplate]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1309 hooks.additionalAssets.callAsync.err
+    [static-html-boilerplate]/[webpack]/lib/Compilation.js:1309:36
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [static-html-boilerplate]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1305 hooks.optimizeTree.callAsync.err
+    [static-html-boilerplate]/[webpack]/lib/Compilation.js:1305:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [static-html-boilerplate]/[tapable]/lib/Hook.js:154:20
+  
+</pre><script type="text/javascript" src="script/app.bundle.js"></script>
