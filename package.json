@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/mochiflappe/static-html-boilerplate#readme",
   "scripts": {
-    "develop": "webpack --mode development",
-    "build": "webpack --mode production"
+    "develop": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.5.1",
