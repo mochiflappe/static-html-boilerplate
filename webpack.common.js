@@ -1,8 +1,9 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const globule = require('globule');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TSLintPlugin = require('tslint-webpack-plugin');
 
-module.exports = {
+const app = {
   entry: [
     './src/assets/script/index.ts',
     'babel-polyfill',
@@ -21,23 +22,36 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.ejs$/,
-        use: [
-          'html-loader',
-          'ejs-html-loader'
-        ]
       }
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      filename: './index.html',
-      template: './src/templates/index.ejs'
-    }),
     new TSLintPlugin({
       files: ['./src/**/*.ts']
     })
   ]
 };
+
+/**
+ * ejsのpathを返す
+ */
+const getEntriesList = () => {
+  const entriesList = {};
+  const filesMatched = globule.find([`**/*.ejs`, `!**/_*.ejs`], {cwd: `${__dirname}/src/`});
+
+  for (const srcName of filesMatched) {
+    const targetName = srcName.replace(new RegExp(`.ejs$`, 'i'), `.html`);
+    entriesList[targetName] = `${__dirname}/src/${srcName}`;
+  }
+
+ return entriesList;
+};
+
+for (const [targetName, srcName] of Object.entries(getEntriesList())) {
+  app.plugins.push(new HtmlWebpackPlugin({
+    filename: targetName,
+    template: srcName
+  }));
+}
+
+module.exports = app;
